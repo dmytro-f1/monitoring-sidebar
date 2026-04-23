@@ -8,6 +8,14 @@
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
+  "prettier": {
+    "singleQuote": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "semi": false,
+    "endOfLine": "lf"
+  },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
     "@tailwindcss/vite": "^4.2.4",
@@ -23,9 +31,11 @@
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/tsconfig": "^0.9.1",
     "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.9.0",
     "globals": "^17.5.0",
     "jiti": "^2.6.1",
+    "prettier": "3.8.3",
     "tailwindcss": "^4.2.4",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.0",
