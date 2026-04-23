@@ -1,9 +1,10 @@
 import { defineStore } from "pinia"
-import { ref } from "vue"
+import { ref, computed } from "vue"
 import { getObjects } from "../services/monitoring.service"
+import type { MonitoringObject } from "../types/monitoring"
 
 export const useMonitoringStore = defineStore("monitoring", () => {
-  const objects = ref([])
+  const objects = ref<MonitoringObject[]>([])
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
@@ -19,5 +20,8 @@ export const useMonitoringStore = defineStore("monitoring", () => {
     }
   }
 
-  return { objects, isLoading, error, fetchObjects }
+  // TODO: filtering functionality
+  const filteredObjects = computed(() => objects.value)
+
+  return { objects, filteredObjects, isLoading, error, fetchObjects }
 })

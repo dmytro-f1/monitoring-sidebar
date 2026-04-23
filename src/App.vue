@@ -1,5 +1,14 @@
 <script setup lang="ts">
 import MonitoringSidebar from "./components/sidebar/MonitoringSidebar.vue"
+
+import { onMounted } from "vue"
+import { useMonitoringStore } from "./stores/monitoring.store"
+
+const monitoringStore = useMonitoringStore()
+onMounted(async () => {
+  console.log("Loading...")
+  await monitoringStore.fetchObjects()
+})
 </script>
 
 <template>
