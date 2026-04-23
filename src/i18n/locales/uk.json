@@ -1,1 +1,16 @@
-{}
+{
+  "transport": {
+    "car": "Автомобіль",
+    "truck": "Вантажівка",
+    "motorcycle": "Мотоцикл"
+  },
+  "movement": {
+    "true": "Рухається",
+    "false": "Стоїть"
+  },
+  "connection": {
+    "online": "Онлайн",
+    "offline": "Офлайн",
+    "unknown": "Невідомо"
+  }
+}

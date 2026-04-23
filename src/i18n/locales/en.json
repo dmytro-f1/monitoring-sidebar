@@ -1,1 +1,16 @@
-{}
+{
+  "transport": {
+    "car": "Car",
+    "truck": "Truck",
+    "motorcycle": "Motorcycle"
+  },
+  "movement": {
+    "true": "Moving",
+    "false": "Not moving"
+  },
+  "connection": {
+    "online": "Online",
+    "offline": "Offline",
+    "unknown": "Unknown"
+  }
+}

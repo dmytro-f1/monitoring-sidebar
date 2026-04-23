@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import MonitoringItem from "./MonitoringItem.vue"
 
-import { useMonitoringStore } from "../../stores/monitoring.store"
+import { useMonitoringStore } from "../../../stores/monitoring.store"
 
 const monitoringStore = useMonitoringStore()
 </script>
