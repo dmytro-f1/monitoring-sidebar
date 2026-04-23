@@ -8,6 +8,11 @@ export const useMonitoringStore = defineStore("monitoring", () => {
   const isLoading = ref(false)
   const error = ref<string | null>(null)
 
+  const selectedObjectId = ref<number | null>(null)
+  const selectedObject = computed(
+    () => objects.value.find((o) => o.id === selectedObjectId.value) || null,
+  )
+
   const fetchObjects = async () => {
     isLoading.value = true
     error.value = null
@@ -23,5 +28,13 @@ export const useMonitoringStore = defineStore("monitoring", () => {
   // TODO: filtering functionality
   const filteredObjects = computed(() => objects.value)
 
-  return { objects, filteredObjects, isLoading, error, fetchObjects }
+  return {
+    objects,
+    filteredObjects,
+    isLoading,
+    error,
+    selectedObjectId,
+    selectedObject,
+    fetchObjects,
+  }
 })

@@ -2,29 +2,45 @@
 import { ref } from "vue"
 import { useI18n } from "vue-i18n"
 import type { MonitoringObject } from "../../../types/monitoring"
+import { useMonitoringStore } from "../../../stores/monitoring.store"
 import StatusBar from "./StatusBar.vue"
 import ActivityTime from "./ActivityTime.vue"
 import ItemDevices from "./ItemDevices.vue"
 import ItemContracts from "./ItemContracts.vue"
 
-defineProps<{
+const props = defineProps<{
   object: MonitoringObject
 }>()
 
 const { t } = useI18n()
+const monitoringStore = useMonitoringStore()
 
 const isExpanded = ref(false)
+
+const selectItem = () => {
+  if (monitoringStore.selectedObjectId === props.object.id) {
+    monitoringStore.selectedObjectId = null
+  } else {
+    monitoringStore.selectedObjectId = props.object.id
+  }
+}
 </script>
 
 <template>
   <div
-    class="border-b border-gray-100 bg-white hover:bg-gray-50 transition-colors"
+    class="border-b border-gray-100 transition-colors border-l-4"
+    :class="
+      monitoringStore.selectedObjectId === object.id
+        ? 'bg-blue-50 border-l-blue-500'
+        : 'bg-white hover:bg-gray-50 border-l-transparent'
+    "
   >
     <div class="p-4">
       <div class="flex justify-between items-start">
         <!-- Left side (object info) -->
         <div class="flex-1">
           <h3
+            @click="selectItem"
             class="font-semibold text-gray-800 hover:text-blue-600 cursor-pointer transition-colors"
           >
             {{ object.name }}
