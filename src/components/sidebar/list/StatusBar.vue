@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n"
-import type {
-  ConnectionStatus,
-  MonitoringObject,
-} from "../../../types/monitoring"
+import type { ConnectionStatus } from "../../../types/monitoring"
 import StatusIcon from "./StatusIcon.vue"
 
 defineProps<{
-  object: MonitoringObject
+  battery_level: number
+  signal_strength: number
+  movement_state: boolean
+  connection_status: ConnectionStatus
 }>()
 
 const { t } = useI18n()
@@ -51,22 +51,22 @@ const getConnectionIcon = (status: ConnectionStatus) => {
   <div class="mt-1 flex items-center space-x-2 text-gray-500">
     <div
       class="flex items-center space-x-0.5"
-      :class="getBatteryColor(object.battery_level)"
+      :class="getBatteryColor(battery_level)"
     >
-      <StatusIcon :icon="getBatteryIcon(object.battery_level)" />
-      <span class="text-xs font-medium"> {{ object.battery_level }}% </span>
+      <StatusIcon :icon="getBatteryIcon(battery_level)" />
+      <span class="text-xs font-medium"> {{ battery_level }}% </span>
     </div>
 
-    <StatusIcon :icon="getSignalIcon(object.signal_strength)" />
+    <StatusIcon :icon="getSignalIcon(signal_strength)" />
 
     <StatusIcon
-      :icon="getMovementIcon(object.movement_state)"
-      :title="t(`status.movement.${object.movement_state}`)"
+      :icon="getMovementIcon(movement_state)"
+      :title="t(`status.movement.${movement_state}`)"
     />
 
     <StatusIcon
-      :icon="getConnectionIcon(object.connection_status)"
-      :title="t(`status.connection.${object.connection_status}`)"
+      :icon="getConnectionIcon(connection_status)"
+      :title="t(`status.connection.${connection_status}`)"
     />
   </div>
 </template>

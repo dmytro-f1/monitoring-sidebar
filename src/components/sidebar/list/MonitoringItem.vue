@@ -19,7 +19,12 @@ const { t } = useI18n()
       {{ object.license_plate }} - {{ t(`transport.${object.type}`) }}
     </p>
 
-    <StatusBar :object />
+    <StatusBar
+      :battery_level="object.battery_level"
+      :signal_strength="object.signal_strength"
+      :movement_state="object.movement_state"
+      :connection_status="object.connection_status"
+    />
     <ActivityTime :iso-time="object.last_message_device_datetime" />
   </div>
 </template>
