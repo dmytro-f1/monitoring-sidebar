@@ -4,13 +4,15 @@
     "truck": "Вантажівка",
     "motorcycle": "Мотоцикл"
   },
-  "movement": {
-    "true": "Рухається",
-    "false": "Стоїть"
-  },
-  "connection": {
-    "online": "Онлайн",
-    "offline": "Офлайн",
-    "unknown": "Невідомо"
+  "status": {
+    "movement": {
+      "true": "Рухається",
+      "false": "Стоїть"
+    },
+    "connection": {
+      "online": "Онлайн",
+      "offline": "Офлайн",
+      "unknown": "Стан підключення невідомий"
+    }
   }
 }

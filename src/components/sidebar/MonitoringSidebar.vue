@@ -4,6 +4,8 @@ import SidebarList from "./list/SidebarList.vue"
 </script>
 
 <template>
-  <SidebarHeader></SidebarHeader>
-  <SidebarList></SidebarList>
+  <div class="flex flex-col h-full overflow-hidden">
+    <SidebarHeader></SidebarHeader>
+    <SidebarList></SidebarList>
+  </div>
 </template>

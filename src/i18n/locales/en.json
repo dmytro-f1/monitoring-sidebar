@@ -4,13 +4,15 @@
     "truck": "Truck",
     "motorcycle": "Motorcycle"
   },
-  "movement": {
-    "true": "Moving",
-    "false": "Not moving"
-  },
-  "connection": {
-    "online": "Online",
-    "offline": "Offline",
-    "unknown": "Unknown"
+  "status": {
+    "movement": {
+      "true": "Moving",
+      "false": "Not moving"
+    },
+    "connection": {
+      "online": "Online",
+      "offline": "Offline",
+      "unknown": "Connection status unknown"
+    }
   }
 }

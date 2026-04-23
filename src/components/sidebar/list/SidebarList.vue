@@ -7,7 +7,9 @@ const monitoringStore = useMonitoringStore()
 </script>
 
 <template>
-  <div class="flex-1 overflow-y-auto">
+  <div
+    class="flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
+  >
     <div v-if="monitoringStore.isLoading" class="p-4 text-center text-gray-500">
       Loading...
     </div>
