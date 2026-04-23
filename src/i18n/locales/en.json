@@ -25,5 +25,22 @@
     "days_ago": "{n} days ago",
     "week_ago": "week ago",
     "weeks_ago": "{n} weeks ago"
+  },
+  "device": {
+    "type": {
+      "tracker": "Tracker",
+      "fuel_sensor": "Fuel sensor",
+      "door_sensor": "Door sensor",
+      "temperature": "Temperature"
+    },
+    "installed_at": "Installed: {str}",
+    "status": {
+      "active": "Status: active",
+      "inactive": "Status: inactive"
+    }
+  },
+  "date": "{year}/{month}/{day}",
+  "empty": {
+    "devices": "No devices found"
   }
 }

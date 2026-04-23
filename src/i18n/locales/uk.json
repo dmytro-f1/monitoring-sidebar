@@ -25,5 +25,22 @@
     "days_ago": "{n} дн. тому",
     "week_ago": "тиждень тому",
     "weeks_ago": "{n} тиж. тому"
+  },
+  "device": {
+    "type": {
+      "tracker": "Трекер",
+      "fuel_sensor": "Датчик пального",
+      "door_sensor": "Датчик дверей",
+      "temperature": "Термометр"
+    },
+    "installed_at": "Встановлено: {str}",
+    "status": {
+      "active": "Статус: активний",
+      "inactive": "Статус: неактивний"
+    }
+  },
+  "date": "{day}.{month}.{year}",
+  "empty": {
+    "devices": "Пристрої не знайдено"
   }
 }
