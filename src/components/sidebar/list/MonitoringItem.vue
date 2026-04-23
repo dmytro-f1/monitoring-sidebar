@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue"
+import { ref, watch } from "vue"
 import { useI18n } from "vue-i18n"
 import type { MonitoringObject } from "../../../types/monitoring"
 import { useMonitoringStore } from "../../../stores/monitoring.store"
@@ -24,10 +24,24 @@ const selectItem = () => {
     monitoringStore.selectedObjectId = props.object.id
   }
 }
+
+const item = ref<HTMLElement>()
+
+watch(
+  () => monitoringStore.selectedObjectId,
+  () => {
+    if (!item.value) return
+
+    if (monitoringStore.selectedObjectId === props.object.id) {
+      item.value?.scrollIntoView({ behavior: "smooth" })
+    }
+  },
+)
 </script>
 
 <template>
   <div
+    ref="item"
     class="border-b border-gray-100 transition-colors border-l-4"
     :class="
       monitoringStore.selectedObjectId === object.id
