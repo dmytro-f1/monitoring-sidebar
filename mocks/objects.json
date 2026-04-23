@@ -1,0 +1,413 @@
+[
+  {
+    "id": 1,
+    "name": "Renault Master 01",
+    "license_plate": "AA1234BB",
+    "type": "truck",
+    "model": "Renault Master 2.3 dCi",
+    "connection_status": "online",
+    "battery_level": 92,
+    "signal_strength": 3,
+    "movement_state": true,
+    "location": { "latitude": 50.4501, "longitude": 30.5234 },
+    "last_message_device_datetime": "2026-04-20T10:42:00Z",
+    "devices": [
+      {
+        "id": 11,
+        "name": "Teltonika FMB920",
+        "model": "FMB920",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2024-08-15"
+      },
+      {
+        "id": 12,
+        "name": "Fuel Sensor",
+        "model": "Omnicomm LLS 4",
+        "type": "fuel_sensor",
+        "is_monitored": true,
+        "installed_at": "2024-08-15"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 101,
+        "name": "Лізинг ОТП",
+        "type": "leasing",
+        "start_datetime": "2024-08-01",
+        "finish_datetime": "2027-08-01",
+        "description": "36 місяців, перший внесок 30%"
+      },
+      {
+        "id": 102,
+        "name": "КАСКО Універсальна",
+        "type": "insurance",
+        "start_datetime": "2025-08-01",
+        "finish_datetime": "2026-08-01",
+        "description": "Повне покриття"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Skoda Octavia 12",
+    "license_plate": "AA5678CC",
+    "type": "car",
+    "model": "Skoda Octavia A8",
+    "connection_status": "online",
+    "battery_level": 64,
+    "signal_strength": 2,
+    "movement_state": false,
+    "location": { "latitude": 50.4612, "longitude": 30.4955 },
+    "last_message_device_datetime": "2026-04-20T10:35:00Z",
+    "devices": [
+      {
+        "id": 21,
+        "name": "Teltonika FMC130",
+        "model": "FMC130",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2025-01-12"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 201,
+        "name": "ОСЦПВ ARX",
+        "type": "insurance",
+        "start_datetime": "2025-01-15",
+        "finish_datetime": "2026-01-15",
+        "description": "Базова автоцивілка"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mercedes Sprinter 04",
+    "license_plate": "AB1111KK",
+    "type": "truck",
+    "model": "Mercedes Sprinter 316 CDI",
+    "connection_status": "offline",
+    "battery_level": 18,
+    "signal_strength": 1,
+    "movement_state": false,
+    "location": { "latitude": 50.4419, "longitude": 30.5169 },
+    "last_message_device_datetime": "2026-04-19T22:10:00Z",
+    "devices": [
+      {
+        "id": 31,
+        "name": "Teltonika FMB920",
+        "model": "FMB920",
+        "type": "tracker",
+        "is_monitored": false,
+        "installed_at": "2023-11-04"
+      }
+    ],
+    "contracts": []
+  },
+  {
+    "id": 4,
+    "name": "Yamaha MT-07",
+    "license_plate": "AA7777MM",
+    "type": "motorcycle",
+    "model": "Yamaha MT-07 689cc",
+    "connection_status": "online",
+    "battery_level": 78,
+    "signal_strength": 3,
+    "movement_state": true,
+    "location": { "latitude": 50.4530, "longitude": 30.5070 },
+    "last_message_device_datetime": "2026-04-20T10:44:00Z",
+    "devices": [
+      {
+        "id": 41,
+        "name": "Queclink GV300",
+        "model": "GV300",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2025-03-10"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 401,
+        "name": "Лізинг УкрСіббанк",
+        "type": "leasing",
+        "start_datetime": "2025-03-01",
+        "finish_datetime": "2028-03-01",
+        "description": "24 місяці"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "VW Caddy 07",
+    "license_plate": "AC2233HH",
+    "type": "car",
+    "model": "Volkswagen Caddy 2.0 TDI",
+    "connection_status": "unknown",
+    "battery_level": 45,
+    "signal_strength": 0,
+    "movement_state": false,
+    "location": { "latitude": 50.4380, "longitude": 30.5550 },
+    "last_message_device_datetime": "2026-04-19T15:20:00Z",
+    "devices": [],
+    "contracts": [
+      {
+        "id": 501,
+        "name": "ОСЦПВ Уніка",
+        "type": "insurance",
+        "start_datetime": "2025-06-01",
+        "finish_datetime": "2026-06-01"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Ford Transit 19",
+    "license_plate": "AH4455CB",
+    "type": "truck",
+    "model": "Ford Transit 350 L4H3",
+    "connection_status": "online",
+    "battery_level": 88,
+    "signal_strength": 3,
+    "movement_state": true,
+    "location": { "latitude": 50.4710, "longitude": 30.5280 },
+    "last_message_device_datetime": "2026-04-20T10:45:00Z",
+    "devices": [
+      {
+        "id": 61,
+        "name": "Teltonika FMB140",
+        "model": "FMB140",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2024-12-20"
+      },
+      {
+        "id": 62,
+        "name": "Door Sensor",
+        "model": "DS-200",
+        "type": "door_sensor",
+        "is_monitored": true,
+        "installed_at": "2024-12-20"
+      },
+      {
+        "id": 63,
+        "name": "Temperature Probe",
+        "model": "TP-1",
+        "type": "temperature",
+        "is_monitored": false,
+        "installed_at": "2025-02-01"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 601,
+        "name": "Лізинг OTP",
+        "type": "leasing",
+        "start_datetime": "2024-12-15",
+        "finish_datetime": "2027-12-15"
+      },
+      {
+        "id": 602,
+        "name": "КАСКО Альфа",
+        "type": "insurance",
+        "start_datetime": "2024-12-15",
+        "finish_datetime": "2025-12-15",
+        "description": "Закінчується через місяць"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Toyota Hilux 02",
+    "license_plate": "AI8888KP",
+    "type": "truck",
+    "model": "Toyota Hilux 2.8 D-4D",
+    "connection_status": "online",
+    "battery_level": 71,
+    "signal_strength": 2,
+    "movement_state": false,
+    "location": { "latitude": 50.4280, "longitude": 30.4690 },
+    "last_message_device_datetime": "2026-04-20T09:55:00Z",
+    "devices": [
+      {
+        "id": 71,
+        "name": "Queclink GV310LAU",
+        "model": "GV310LAU",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2025-04-01"
+      }
+    ],
+    "contracts": []
+  },
+  {
+    "id": 8,
+    "name": "Renault Kangoo 22",
+    "license_plate": "AE3322XX",
+    "type": "car",
+    "model": "Renault Kangoo Express",
+    "connection_status": "offline",
+    "battery_level": 9,
+    "signal_strength": 0,
+    "movement_state": false,
+    "location": { "latitude": 50.4115, "longitude": 30.5290 },
+    "last_message_device_datetime": "2026-04-18T08:30:00Z",
+    "devices": [
+      {
+        "id": 81,
+        "name": "Teltonika FMB920",
+        "model": "FMB920",
+        "type": "tracker",
+        "is_monitored": false,
+        "installed_at": "2022-05-10"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 801,
+        "name": "ОСЦПВ ARX",
+        "type": "insurance",
+        "start_datetime": "2024-05-10",
+        "finish_datetime": "2025-05-10",
+        "description": "Прострочений"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Honda CB650R",
+    "license_plate": "AA9999OO",
+    "type": "motorcycle",
+    "model": "Honda CB650R Neo Sports Cafe",
+    "connection_status": "online",
+    "battery_level": 55,
+    "signal_strength": 3,
+    "movement_state": true,
+    "location": { "latitude": 50.4805, "longitude": 30.4870 },
+    "last_message_device_datetime": "2026-04-20T10:43:00Z",
+    "devices": [
+      {
+        "id": 91,
+        "name": "Queclink GV300",
+        "model": "GV300",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2025-05-22"
+      }
+    ],
+    "contracts": []
+  },
+  {
+    "id": 10,
+    "name": "MAN TGS 41",
+    "license_plate": "AT1010MN",
+    "type": "truck",
+    "model": "MAN TGS 33.440",
+    "connection_status": "online",
+    "battery_level": 96,
+    "signal_strength": 3,
+    "movement_state": false,
+    "location": { "latitude": 50.4900, "longitude": 30.5150 },
+    "last_message_device_datetime": "2026-04-20T10:30:00Z",
+    "devices": [
+      {
+        "id": 101,
+        "name": "Teltonika FMB140",
+        "model": "FMB140",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2024-02-08"
+      },
+      {
+        "id": 102,
+        "name": "Fuel Sensor",
+        "model": "Omnicomm LLS 4",
+        "type": "fuel_sensor",
+        "is_monitored": true,
+        "installed_at": "2024-02-08"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 1001,
+        "name": "Лізинг ProCredit",
+        "type": "leasing",
+        "start_datetime": "2024-02-01",
+        "finish_datetime": "2029-02-01",
+        "description": "60 місяців"
+      },
+      {
+        "id": 1002,
+        "name": "КАСКО Універсальна",
+        "type": "insurance",
+        "start_datetime": "2025-02-01",
+        "finish_datetime": "2026-02-01"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Peugeot Partner 08",
+    "license_plate": "AX5544RR",
+    "type": "car",
+    "model": "Peugeot Partner Crew Van",
+    "connection_status": "unknown",
+    "battery_level": 38,
+    "signal_strength": 1,
+    "movement_state": false,
+    "location": { "latitude": 50.4055, "longitude": 30.6320 },
+    "last_message_device_datetime": "2026-04-19T18:00:00Z",
+    "devices": [
+      {
+        "id": 111,
+        "name": "Teltonika FMB920",
+        "model": "FMB920",
+        "type": "tracker",
+        "is_monitored": false,
+        "installed_at": "2023-09-01"
+      }
+    ],
+    "contracts": []
+  },
+  {
+    "id": 12,
+    "name": "Iveco Daily 35",
+    "license_plate": "AB6677LL",
+    "type": "truck",
+    "model": "Iveco Daily 35S14",
+    "connection_status": "online",
+    "battery_level": 82,
+    "signal_strength": 2,
+    "movement_state": true,
+    "location": { "latitude": 50.4660, "longitude": 30.6010 },
+    "last_message_device_datetime": "2026-04-20T10:41:00Z",
+    "devices": [
+      {
+        "id": 121,
+        "name": "Queclink GV310LAU",
+        "model": "GV310LAU",
+        "type": "tracker",
+        "is_monitored": true,
+        "installed_at": "2024-10-30"
+      },
+      {
+        "id": 122,
+        "name": "Door Sensor",
+        "model": "DS-200",
+        "type": "door_sensor",
+        "is_monitored": true,
+        "installed_at": "2024-10-30"
+      }
+    ],
+    "contracts": [
+      {
+        "id": 1201,
+        "name": "Лізинг УкрСіббанк",
+        "type": "leasing",
+        "start_datetime": "2024-10-15",
+        "finish_datetime": "2027-10-15"
+      }
+    ]
+  }
+]
