@@ -78,6 +78,13 @@ export const useMonitoringStore = defineStore("monitoring", () => {
       return sortOrder.value === "asc" ? comparison : -comparison
     })
 
+    if (
+      selectedObjectId.value &&
+      !result.find((o) => o.id === selectedObjectId.value)
+    ) {
+      selectedObjectId.value = null
+    }
+
     return result
   })
 

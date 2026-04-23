@@ -1,4 +1,5 @@
 {
+  "search_placeholder": "Model name or license plate",
   "transport": {
     "car": "Car",
     "truck": "Truck",
