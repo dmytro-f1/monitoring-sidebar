@@ -14,5 +14,16 @@
       "offline": "Офлайн",
       "unknown": "Стан підключення невідомий"
     }
+  },
+  "last_activity": "Остання активність: {str}",
+  "time": {
+    "now": "щойно",
+    "seconds ago": "{n} сек тому",
+    "minutes_ago": "{n} хв тому",
+    "hours_ago": "{n} год тому",
+    "yesterday": "вчора",
+    "days_ago": "{n} дн. тому",
+    "week_ago": "тиждень тому",
+    "weeks_ago": "{n} тиж. тому"
   }
 }

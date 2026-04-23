@@ -2,6 +2,7 @@
 import { useI18n } from "vue-i18n"
 import type { MonitoringObject } from "../../../types/monitoring"
 import StatusBar from "./StatusBar.vue"
+import ActivityTime from "./ActivityTime.vue"
 defineProps<{
   object: MonitoringObject
 }>()
@@ -19,5 +20,6 @@ const { t } = useI18n()
     </p>
 
     <StatusBar :object />
+    <ActivityTime :iso-time="object.last_message_device_datetime" />
   </div>
 </template>

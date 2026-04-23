@@ -14,5 +14,16 @@
       "offline": "Offline",
       "unknown": "Connection status unknown"
     }
+  },
+  "last_activity": "Last activity: {str}",
+  "time": {
+    "now": "now",
+    "seconds ago": "{n} sec ago",
+    "minutes_ago": "{n} min ago",
+    "hours_ago": "{n} hr ago",
+    "yesterday": "yesterday",
+    "days_ago": "{n} days ago",
+    "week_ago": "week ago",
+    "weeks_ago": "{n} weeks ago"
   }
 }
