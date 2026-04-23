@@ -39,6 +39,12 @@
       "inactive": "Status: inactive"
     }
   },
+  "contract": {
+    "type": {
+      "insurance": "Insurance",
+      "leasing": "Leasing"
+    }
+  },
   "date": "{year}/{month}/{day}",
   "empty": {
     "devices": "No devices found"

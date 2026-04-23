@@ -5,6 +5,7 @@ import type { MonitoringObject } from "../../../types/monitoring"
 import StatusBar from "./StatusBar.vue"
 import ActivityTime from "./ActivityTime.vue"
 import ItemDevices from "./ItemDevices.vue"
+import ItemContracts from "./ItemContracts.vue"
 
 defineProps<{
   object: MonitoringObject
@@ -54,7 +55,7 @@ const isExpanded = ref(false)
 
       <div v-show="isExpanded" class="mt-2">
         <ItemDevices :devices="object.devices ?? []" />
-        <!-- <ItemContracts :contracts="object.contracts ?? []" /> -->
+        <ItemContracts :contracts="object.contracts ?? []" />
       </div>
     </div>
   </div>

@@ -39,6 +39,12 @@
       "inactive": "Статус: неактивний"
     }
   },
+  "contract": {
+    "type": {
+      "insurance": "Страхування",
+      "leasing": "Лізинг"
+    }
+  },
   "date": "{day}.{month}.{year}",
   "empty": {
     "devices": "Пристрої не знайдено"
