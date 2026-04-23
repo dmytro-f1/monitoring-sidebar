@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx --fix",
     "format": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "vitest run"
   },
   "prettier": {
     "singleQuote": false,
@@ -44,6 +45,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.0",
     "vite": "^8.0.10",
+    "vitest": "^4.1.5",
     "vue-tsc": "^3.2.7"
   }
 }
