@@ -1,7 +1,13 @@
 import { defineStore } from "pinia"
 import { ref, computed } from "vue"
 import { getObjects } from "../services/monitoring.service"
-import type { MonitoringObject } from "../types/monitoring"
+import type { MonitoringObject, ConnectionStatus } from "../types/monitoring"
+
+export interface MonitoringFilters {
+  searchQuery: string
+  connection: ConnectionStatus[]
+  movement: boolean[]
+}
 
 export const useMonitoringStore = defineStore("monitoring", () => {
   const objects = ref<MonitoringObject[]>([])
@@ -25,8 +31,63 @@ export const useMonitoringStore = defineStore("monitoring", () => {
     }
   }
 
-  // TODO: filtering functionality
-  const filteredObjects = computed(() => objects.value)
+  const sortBy = ref<"name" | "last_activity">("name")
+  const sortOrder = ref<"asc" | "desc">("asc")
+
+  const filters = ref<MonitoringFilters>({
+    searchQuery: "",
+    connection: [],
+    movement: [],
+  })
+
+  const filteredObjects = computed(() => {
+    let result = objects.value
+
+    if (filters.value.searchQuery.trim()) {
+      const lowerQuery = filters.value.searchQuery.toLowerCase()
+      result = result.filter(
+        (o) =>
+          o.name.toLowerCase().includes(lowerQuery) ||
+          o.license_plate.toLowerCase().includes(lowerQuery),
+      )
+    }
+
+    if (filters.value.connection.length > 0) {
+      result = result.filter((o) =>
+        filters.value.connection.includes(o.connection_status),
+      )
+    }
+
+    if (filters.value.movement.length > 0) {
+      result = result.filter((o) =>
+        filters.value.movement.includes(o.movement_state),
+      )
+    }
+
+    result = [...result].sort((a, b) => {
+      let comparison = 0
+
+      if (sortBy.value === "name") {
+        comparison = a.name.localeCompare(b.name)
+      } else if (sortBy.value === "last_activity") {
+        const timeA = new Date(a.last_message_device_datetime).getTime()
+        const timeB = new Date(b.last_message_device_datetime).getTime()
+        comparison = timeA - timeB
+      }
+
+      return sortOrder.value === "asc" ? comparison : -comparison
+    })
+
+    return result
+  })
+
+  const clearFilters = () => {
+    filters.value = {
+      searchQuery: "",
+      connection: [],
+      movement: [],
+    }
+  }
 
   return {
     objects,
@@ -35,6 +96,10 @@ export const useMonitoringStore = defineStore("monitoring", () => {
     error,
     selectedObjectId,
     selectedObject,
+    filters,
+    sortBy,
+    sortOrder,
     fetchObjects,
+    clearFilters,
   }
 })
