@@ -49,6 +49,7 @@
     "weeks_ago": "{n} тиж. тому"
   },
   "device": {
+    "title": "Пристрої",
     "type": {
       "tracker": "Трекер",
       "fuel_sensor": "Датчик пального",
@@ -62,6 +63,7 @@
     }
   },
   "contract": {
+    "title": "Контракти",
     "type": {
       "insurance": "Страхування",
       "leasing": "Лізинг"
