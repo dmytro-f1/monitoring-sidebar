@@ -1,21 +1,27 @@
 import { createI18n } from "vue-i18n"
+import { watch } from "vue"
 
 import en from "./locales/en.json"
 import uk from "./locales/uk.json"
 
-const getBrowserLocale = () => {
-  const browserLocale = navigator.language.split("-")[0]
+const getLocale = () => {
+  const locale =
+    localStorage.getItem("locale") ?? navigator.language.split("-")[0]
 
-  if (browserLocale.includes("uk") || browserLocale.includes("ru")) return "uk"
+  if (locale.includes("uk") || locale.includes("ru")) return "uk"
 
   return "en"
 }
 
 const i18n = createI18n({
   legacy: false,
-  locale: getBrowserLocale(),
+  locale: getLocale(),
   fallbackLocale: "en",
   messages: { en, uk },
+})
+
+watch(i18n.global.locale, (newLocale) => {
+  localStorage.setItem("locale", newLocale)
 })
 
 export default i18n
