@@ -38,7 +38,7 @@ const getDateString = (dateStr: string) => {
       >
         {{ isExpanded ? "keyboard_arrow_down" : "keyboard_arrow_right" }}
       </span>
-      <span>{{ t("contracts") }} ({{ contracts.length }})</span>
+      <span>{{ t("contract.title") }} ({{ contracts.length }})</span>
     </button>
 
     <div v-show="!isEmpty && isExpanded" class="mt-2 text-sm text-gray-600">

@@ -38,7 +38,7 @@ const getInstalledAtString = (installedAt: string) => {
       >
         {{ isExpanded ? "keyboard_arrow_down" : "keyboard_arrow_right" }}
       </span>
-      <span>{{ t("devices") }} ({{ devices.length }})</span>
+      <span>{{ t("device.title") }} ({{ devices.length }})</span>
     </button>
 
     <div v-show="!isEmpty && isExpanded" class="my-2 text-sm text-gray-600">

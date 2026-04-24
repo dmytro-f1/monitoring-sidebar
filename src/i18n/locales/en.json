@@ -49,6 +49,7 @@
     "weeks_ago": "{n} weeks ago"
   },
   "device": {
+    "title": "Devices",
     "type": {
       "tracker": "Tracker",
       "fuel_sensor": "Fuel sensor",
@@ -62,6 +63,7 @@
     }
   },
   "contract": {
+    "title": "Contracts",
     "type": {
       "insurance": "Insurance",
       "leasing": "Leasing"

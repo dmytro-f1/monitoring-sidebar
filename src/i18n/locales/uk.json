@@ -1,5 +1,5 @@
 {
-  "search_placeholder": "Назва моделі або номерний знак",
+  "search_placeholder": "Модель або номерний знак",
   "sort": {
     "title": "Сортування",
     "by": "Сортування за",
@@ -49,6 +49,7 @@
     "weeks_ago": "{n} тиж. тому"
   },
   "device": {
+    "title": "Пристрої",
     "type": {
       "tracker": "Трекер",
       "fuel_sensor": "Датчик пального",
@@ -62,6 +63,7 @@
     }
   },
   "contract": {
+    "title": "Контракти",
     "type": {
       "insurance": "Страхування",
       "leasing": "Лізинг"
