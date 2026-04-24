@@ -3,10 +3,10 @@ import MonitoringSidebar from "./components/sidebar/MonitoringSidebar.vue"
 
 import { onMounted } from "vue"
 import { useMonitoringStore } from "./stores/monitoring.store"
+import ObjectsMap from "./components/map/ObjectsMap.vue"
 
 const monitoringStore = useMonitoringStore()
 onMounted(async () => {
-  console.log("Loading...")
   await monitoringStore.fetchObjects()
 })
 </script>
@@ -19,7 +19,7 @@ onMounted(async () => {
       <MonitoringSidebar />
     </aside>
     <main class="flex-1 border bg-white border-gray-300 rounded-lg">
-      <!-- Map -->
+      <ObjectsMap />
     </main>
   </div>
 </template>
