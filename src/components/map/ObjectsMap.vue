@@ -6,13 +6,22 @@ import { onMounted } from "vue"
 import { Map, View } from "ol"
 import { OSM } from "ol/source"
 import TileLayer from "ol/layer/Tile"
+import { Vector as VectorLayer } from "ol/layer"
+import { Vector as VectorSource } from "ol/source"
+import { useMapFeatures } from "../../composables/useMapFeatures"
+import { useSourceZoomOnce } from "../../composables/useZoomOnce"
+
+const vectorSource = new VectorSource()
 
 onMounted(() => {
-  new Map({
+  const map = new Map({
     target: "map",
     layers: [
       new TileLayer({
         source: new OSM(),
+      }),
+      new VectorLayer({
+        source: vectorSource,
       }),
     ],
     view: new View({
@@ -20,6 +29,9 @@ onMounted(() => {
       zoom: 2,
     }),
   })
+
+  useMapFeatures(map, vectorSource)
+  useSourceZoomOnce(map, vectorSource)
 })
 </script>
 
