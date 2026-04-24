@@ -1,5 +1,14 @@
 {
   "search_placeholder": "Model name or license plate",
+  "sort": {
+    "title": "Sort",
+    "by": "Sort by",
+    "by_name": "Name",
+    "by_last_activity": "Last activity",
+    "order": "Order",
+    "order_asc": "Ascending",
+    "order_desc": "Descending"
+  },
   "transport": {
     "car": "Car",
     "truck": "Truck",

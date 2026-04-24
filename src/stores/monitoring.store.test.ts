@@ -165,10 +165,10 @@ describe("monitoring.store", () => {
 
       store.sortBy = "last_activity"
       store.sortOrder = "asc"
-      expect(store.filteredObjects[0].id).toBe(2)
+      expect(store.filteredObjects[0].id).toBe(1)
 
       store.sortOrder = "desc"
-      expect(store.filteredObjects[0].id).toBe(1)
+      expect(store.filteredObjects[0].id).toBe(2)
     })
   })
 })

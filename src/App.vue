@@ -14,7 +14,7 @@ onMounted(async () => {
 <template>
   <div class="flex h-screen p-4 gap-4 bg-gray-50">
     <aside
-      class="w-75 border bg-white border-gray-300 rounded-lg overflow-hidden"
+      class="w-90 border bg-white border-gray-300 rounded-lg overflow-hidden"
     >
       <MonitoringSidebar />
     </aside>

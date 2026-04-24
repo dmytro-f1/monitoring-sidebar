@@ -70,9 +70,11 @@ export const useMonitoringStore = defineStore("monitoring", () => {
       if (sortBy.value === "name") {
         comparison = a.name.localeCompare(b.name)
       } else if (sortBy.value === "last_activity") {
-        const timeA = new Date(a.last_message_device_datetime).getTime()
-        const timeB = new Date(b.last_message_device_datetime).getTime()
-        comparison = timeA - timeB
+        const timeA = new Date(a.last_message_device_datetime).getTime() || 0
+        const timeB = new Date(b.last_message_device_datetime).getTime() || 0
+        // sorted by the passed time, not the date
+        // (now - timeA) - (now - timeB) = timeB - timeA
+        comparison = timeB - timeA
       }
 
       return sortOrder.value === "asc" ? comparison : -comparison
