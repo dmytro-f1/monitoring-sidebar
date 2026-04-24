@@ -6,52 +6,88 @@ import VectorSource from "ol/source/Vector"
 
 import { useMonitoringStore } from "../stores/monitoring.store"
 import { createMapFeatures } from "../utils/map-features"
+import type VectorLayer from "ol/layer/Vector"
 
-export function useMapFeatures(map: Map, vectorSource: VectorSource) {
+export function useMapFeatures(
+  map: Map,
+  vectorSource: VectorSource,
+  vectorLayer: VectorLayer,
+) {
   const monitoringStore = useMonitoringStore()
 
-  watch(
-    () => monitoringStore.filteredObjects,
-    () => {
-      vectorSource.clear()
+  map.on("click", (e) => {
+    const feature = map.forEachFeatureAtPixel(e.pixel, (f) => f, {
+      layerFilter: (l) => l === vectorLayer,
+      hitTolerance: 4,
+    })
 
-      const selectedObject = monitoringStore.selectedObject
+    if (feature) {
+      const id = feature.get("id") as number
+      if (!id) return
+      monitoringStore.selectedObjectId =
+        monitoringStore.selectedObjectId === id ? null : id
+    }
+  })
 
-      const features = createMapFeatures(
-        monitoringStore.filteredObjects,
-        selectedObject?.id,
-      )
+  map.on("pointermove", (e) => {
+    const hit = map.hasFeatureAtPixel(e.pixel, {
+      layerFilter: (l) => l === vectorLayer,
+      hitTolerance: 4,
+    })
 
-      vectorSource.addFeatures(features)
-    },
-    { immediate: true },
-  )
-  watch(
-    () => monitoringStore.selectedObject,
-    () => {
-      const selectedObject = monitoringStore.selectedObject
-      vectorSource.clear()
+    map.getTargetElement().style.cursor = hit ? "pointer" : ""
+  })
 
-      const features = createMapFeatures(
-        monitoringStore.filteredObjects,
-        selectedObject?.id,
-      )
+  const watchers = [
+    watch(
+      () => monitoringStore.filteredObjects,
+      () => {
+        vectorSource.clear()
 
-      vectorSource.addFeatures(features)
+        const selectedObject = monitoringStore.selectedObject
 
-      map.renderSync()
+        const features = createMapFeatures(
+          monitoringStore.filteredObjects,
+          selectedObject?.id,
+        )
 
-      if (selectedObject) {
-        map.getView().animate({
-          center: fromLonLat([
-            selectedObject.location.longitude,
-            selectedObject.location.latitude,
-          ]),
-          duration: 500,
-          zoom: 12,
-        })
-      }
-    },
-    { immediate: true },
-  )
+        vectorSource.addFeatures(features)
+      },
+      { immediate: true },
+    ),
+    watch(
+      () => monitoringStore.selectedObject,
+      () => {
+        const selectedObject = monitoringStore.selectedObject
+        vectorSource.clear()
+
+        const features = createMapFeatures(
+          monitoringStore.filteredObjects,
+          selectedObject?.id,
+        )
+
+        vectorSource.addFeatures(features)
+
+        map.renderSync()
+
+        if (selectedObject) {
+          const currentZoom = map.getView().getZoom() ?? 0
+
+          map.getView().animate({
+            center: fromLonLat([
+              selectedObject.location.longitude,
+              selectedObject.location.latitude,
+            ]),
+            duration: 500,
+            zoom: Math.max(12, currentZoom),
+          })
+        }
+      },
+      { immediate: true },
+    ),
+  ]
+
+  return () => {
+    watchers.forEach((w) => w.stop())
+  }
 }

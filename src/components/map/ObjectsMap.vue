@@ -12,6 +12,9 @@ import { useMapFeatures } from "../../composables/useMapFeatures"
 import { useSourceZoomOnce } from "../../composables/useZoomOnce"
 
 const vectorSource = new VectorSource()
+const vectorLayer = new VectorLayer({
+  source: vectorSource,
+})
 
 onMounted(() => {
   const map = new Map({
@@ -20,9 +23,7 @@ onMounted(() => {
       new TileLayer({
         source: new OSM(),
       }),
-      new VectorLayer({
-        source: vectorSource,
-      }),
+      vectorLayer,
     ],
     view: new View({
       center: [0, 0],
@@ -30,7 +31,7 @@ onMounted(() => {
     }),
   })
 
-  useMapFeatures(map, vectorSource)
+  useMapFeatures(map, vectorSource, vectorLayer)
   useSourceZoomOnce(map, vectorSource)
 })
 </script>

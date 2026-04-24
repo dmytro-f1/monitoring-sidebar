@@ -19,8 +19,9 @@ export function createMapFeatures(
         fromLonLat([obj.location.longitude, obj.location.latitude]),
       ),
       name: obj.name,
-      properties: obj,
     })
+
+    feature.set("id", obj.id)
 
     feature.setStyle(createMarkerStyle(isConnected, isSelected))
     return feature
