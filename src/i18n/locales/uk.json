@@ -1,0 +1,74 @@
+{
+  "search_placeholder": "Назва моделі або номерний знак",
+  "sort": {
+    "title": "Сортування",
+    "by": "Сортування за",
+    "by_name": "Ім'ям",
+    "by_last_activity": "Останньою активністю",
+    "order": "Порядок",
+    "order_asc": "Зростання",
+    "order_desc": "Спадання"
+  },
+  "filters": {
+    "title": "Фільтри",
+    "connection": "Підключення",
+    "online": "Онлайн",
+    "offline": "Офлайн",
+    "unknown": "Невідомо",
+    "movement": "Рух",
+    "moving": "Рухається",
+    "stopped": "Стоїть",
+    "clear": "Очистити фільтри"
+  },
+  "showing_n_out_of_m_items": "Показано {n} із {m} елементів",
+  "transport": {
+    "car": "Автомобіль",
+    "truck": "Вантажівка",
+    "motorcycle": "Мотоцикл"
+  },
+  "status": {
+    "movement": {
+      "true": "Рухається",
+      "false": "Стоїть"
+    },
+    "connection": {
+      "online": "Онлайн",
+      "offline": "Офлайн",
+      "unknown": "Стан підключення невідомий"
+    }
+  },
+  "last_activity": "Остання активність: {str}",
+  "time": {
+    "now": "щойно",
+    "seconds ago": "{n} сек тому",
+    "minutes_ago": "{n} хв тому",
+    "hours_ago": "{n} год тому",
+    "yesterday": "вчора",
+    "days_ago": "{n} дн. тому",
+    "week_ago": "тиждень тому",
+    "weeks_ago": "{n} тиж. тому"
+  },
+  "device": {
+    "type": {
+      "tracker": "Трекер",
+      "fuel_sensor": "Датчик пального",
+      "door_sensor": "Датчик дверей",
+      "temperature": "Термометр"
+    },
+    "installed_at": "Встановлено: {str}",
+    "status": {
+      "active": "Статус: активний",
+      "inactive": "Статус: неактивний"
+    }
+  },
+  "contract": {
+    "type": {
+      "insurance": "Страхування",
+      "leasing": "Лізинг"
+    }
+  },
+  "date": "{day}.{month}.{year}",
+  "empty": {
+    "devices": "Пристрої не знайдено"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "search_placeholder": "Model name or license plate",
+  "sort": {
+    "title": "Sort",
+    "by": "Sort by",
+    "by_name": "Name",
+    "by_last_activity": "Last activity",
+    "order": "Order",
+    "order_asc": "Ascending",
+    "order_desc": "Descending"
+  },
+  "filters": {
+    "title": "Filters",
+    "connection": "Connection",
+    "online": "Online",
+    "offline": "Offline",
+    "unknown": "Unknown",
+    "movement": "Movement",
+    "moving": "Moving",
+    "stopped": "Stopped",
+    "clear": "Clear filters"
+  },
+  "showing_n_out_of_m_items": "Showing {n} out of {m} items",
+  "transport": {
+    "car": "Car",
+    "truck": "Truck",
+    "motorcycle": "Motorcycle"
+  },
+  "status": {
+    "movement": {
+      "true": "Moving",
+      "false": "Not moving"
+    },
+    "connection": {
+      "online": "Online",
+      "offline": "Offline",
+      "unknown": "Connection status unknown"
+    }
+  },
+  "last_activity": "Last activity: {str}",
+  "time": {
+    "now": "now",
+    "seconds ago": "{n} sec ago",
+    "minutes_ago": "{n} min ago",
+    "hours_ago": "{n} hr ago",
+    "yesterday": "yesterday",
+    "days_ago": "{n} days ago",
+    "week_ago": "week ago",
+    "weeks_ago": "{n} weeks ago"
+  },
+  "device": {
+    "type": {
+      "tracker": "Tracker",
+      "fuel_sensor": "Fuel sensor",
+      "door_sensor": "Door sensor",
+      "temperature": "Temperature"
+    },
+    "installed_at": "Installed: {str}",
+    "status": {
+      "active": "Status: active",
+      "inactive": "Status: inactive"
+    }
+  },
+  "contract": {
+    "type": {
+      "insurance": "Insurance",
+      "leasing": "Leasing"
+    }
+  },
+  "date": "{year}/{month}/{day}",
+  "empty": {
+    "devices": "No devices found"
+  }
+}
