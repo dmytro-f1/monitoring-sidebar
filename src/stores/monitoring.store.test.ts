@@ -84,11 +84,11 @@ describe("monitoring.store", () => {
         createMockObject({ id: 2, name: "Car B", license_plate: "BB2222BB" }),
       ]
 
-      store.filters.searchQuery = "truck"
+      store.searchQuery = "truck"
       expect(store.filteredObjects).toHaveLength(1)
       expect(store.filteredObjects[0].id).toBe(1)
 
-      store.filters.searchQuery = "2222"
+      store.searchQuery = "2222"
       expect(store.filteredObjects).toHaveLength(1)
       expect(store.filteredObjects[0].id).toBe(2)
     })
@@ -124,13 +124,13 @@ describe("monitoring.store", () => {
     it("should clear all filters", () => {
       const store = useMonitoringStore()
 
-      store.filters.searchQuery = "test"
+      store.searchQuery = "test"
       store.filters.connection = ["online"]
       store.filters.movement = [true]
 
       store.clearFilters()
 
-      expect(store.filters.searchQuery).toBe("")
+      expect(store.searchQuery).toBe("test")
       expect(store.filters.connection).toEqual([])
       expect(store.filters.movement).toEqual([])
     })

@@ -29,9 +29,8 @@ const setSortOrder = (sortOrder: "asc" | "desc") => {
   <Menu as="div" class="relative inline-block text-left">
     <div>
       <MenuButton
-        class="px-4 h-10 flex items-center justify-center gap-2 text-gray-500 hover:text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-all focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
+        class="w-10 h-10 flex items-center justify-center gap-2 text-gray-500 hover:text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg transition-all focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 cursor-pointer"
       >
-        <span class="text-nowrap">{{ t("sort.title") }}</span>
         <span class="material-symbols-outlined text-xl!"> sort </span>
       </MenuButton>
     </div>
@@ -45,7 +44,7 @@ const setSortOrder = (sortOrder: "asc" | "desc") => {
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems
-        class="absolute left-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden overflow-hidden"
+        class="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden overflow-hidden"
       >
         <!-- Sort Type Group -->
         <div

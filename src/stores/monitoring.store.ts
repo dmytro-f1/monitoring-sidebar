@@ -4,7 +4,6 @@ import { getObjects } from "../services/monitoring.service"
 import type { MonitoringObject, ConnectionStatus } from "../types/monitoring"
 
 export interface MonitoringFilters {
-  searchQuery: string
   connection: ConnectionStatus[]
   movement: boolean[]
 }
@@ -31,20 +30,26 @@ export const useMonitoringStore = defineStore("monitoring", () => {
     }
   }
 
+  const searchQuery = ref("")
+
   const sortBy = ref<"name" | "last_activity">("name")
   const sortOrder = ref<"asc" | "desc">("asc")
 
   const filters = ref<MonitoringFilters>({
-    searchQuery: "",
     connection: [],
     movement: [],
   })
 
+  const hasActiveFilters = computed(
+    () =>
+      filters.value.connection.length > 0 || filters.value.movement.length > 0,
+  )
+
   const filteredObjects = computed(() => {
     let result = objects.value
 
-    if (filters.value.searchQuery.trim()) {
-      const lowerQuery = filters.value.searchQuery.toLowerCase()
+    if (searchQuery.value.trim()) {
+      const lowerQuery = searchQuery.value.toLowerCase()
       result = result.filter(
         (o) =>
           o.name.toLowerCase().includes(lowerQuery) ||
@@ -92,7 +97,6 @@ export const useMonitoringStore = defineStore("monitoring", () => {
 
   const clearFilters = () => {
     filters.value = {
-      searchQuery: "",
       connection: [],
       movement: [],
     }
@@ -101,14 +105,21 @@ export const useMonitoringStore = defineStore("monitoring", () => {
   return {
     objects,
     filteredObjects,
+    fetchObjects,
+
     isLoading,
     error,
+
     selectedObjectId,
     selectedObject,
-    filters,
+
+    searchQuery,
+
     sortBy,
     sortOrder,
-    fetchObjects,
+
+    filters,
+    hasActiveFilters,
     clearFilters,
   }
 })

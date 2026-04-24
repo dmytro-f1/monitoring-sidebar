@@ -9,6 +9,17 @@
     "order_asc": "Зростання",
     "order_desc": "Спадання"
   },
+  "filters": {
+    "title": "Фільтри",
+    "connection": "Підключення",
+    "online": "Онлайн",
+    "offline": "Офлайн",
+    "unknown": "Невідомо",
+    "movement": "Рух",
+    "moving": "Рухається",
+    "stopped": "Стоїть",
+    "clear": "Очистити фільтри"
+  },
   "transport": {
     "car": "Автомобіль",
     "truck": "Вантажівка",

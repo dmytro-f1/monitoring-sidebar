@@ -9,6 +9,17 @@
     "order_asc": "Ascending",
     "order_desc": "Descending"
   },
+  "filters": {
+    "title": "Filters",
+    "connection": "Connection",
+    "online": "Online",
+    "offline": "Offline",
+    "unknown": "Unknown",
+    "movement": "Movement",
+    "moving": "Moving",
+    "stopped": "Stopped",
+    "clear": "Clear filters"
+  },
   "transport": {
     "car": "Car",
     "truck": "Truck",
