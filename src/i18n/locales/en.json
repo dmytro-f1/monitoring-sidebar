@@ -20,6 +20,7 @@
     "stopped": "Stopped",
     "clear": "Clear filters"
   },
+  "showing_n_out_of_m_items": "Showing {n} out of {m} items",
   "transport": {
     "car": "Car",
     "truck": "Truck",

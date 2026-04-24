@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { useMonitoringStore } from "../../../stores/monitoring.store"
 import SearchBar from "./SearchBar.vue"
 import SortDropdown from "./SortDropdown.vue"
 import FiltersPopover from "./FiltersPopover.vue"
+import ItemsCounter from "./ItemsCounter.vue"
+
+import { useMonitoringStore } from "../../../stores/monitoring.store"
 
 const monitoringStore = useMonitoringStore()
 </script>
 
 <template>
   <div
-    class="p-4 border-b border-gray-200 bg-white relative z-10 flex flex-col gap-3"
+    class="pt-4 px-3 pb-2 border-b border-gray-200 bg-white relative z-10 flex flex-col gap-3"
   >
     <div class="flex flex-col w-full items-center gap-2">
       <div class="flex w-full items-center gap-2">
@@ -23,6 +25,10 @@ const monitoringStore = useMonitoringStore()
           <FiltersPopover />
         </div>
       </div>
+      <ItemsCounter
+        :shown="monitoringStore.filteredObjects.length"
+        :total="monitoringStore.objects.length"
+      />
     </div>
   </div>
 </template>
