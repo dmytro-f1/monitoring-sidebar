@@ -4,8 +4,10 @@ import MonitoringSidebar from "./components/sidebar/MonitoringSidebar.vue"
 import { onMounted } from "vue"
 import { useMonitoringStore } from "./stores/monitoring.store"
 import ObjectsMap from "./components/map/ObjectsMap.vue"
+import LanguageSelect from "./components/LanguageSelect.vue"
 
 const monitoringStore = useMonitoringStore()
+
 onMounted(async () => {
   await monitoringStore.fetchObjects()
 })
@@ -18,8 +20,11 @@ onMounted(async () => {
     >
       <MonitoringSidebar />
     </aside>
-    <main class="flex-1 border bg-white border-gray-300 rounded-lg">
+    <main
+      class="flex-1 border bg-white border-gray-300 rounded-lg relative overflow-hidden"
+    >
       <ObjectsMap />
+      <LanguageSelect class="absolute top-4 right-4 z-10" />
     </main>
   </div>
 </template>
